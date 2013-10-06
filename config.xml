@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.phonegap.example"
+    version   = "1.0.0">
+	<!-- If you do not want any permissions to be added to your app, add the
+    following tag to your config.xml; you will still have the INTERNET
+    permission on your app, which PhoneGap requires. -->
+
+<feature name="http://api.phonegap.com/1.0/battery"/>
+
+<feature name="http://api.phonegap.com/1.0/file"/>
+<feature name="http://api.phonegap.com/1.0/geolocation"/>
+<feature name="http://api.phonegap.com/1.0/media"/>
+<feature name="http://api.phonegap.com/1.0/network"/>
+
+<feature > هذا المنتج مصمم من قبل شركة اكوان يمنع الاتجار بهذا المنتج دون الرجوع للمصدر والحصول على الموافقة منه واي خرق لهذا القانون سيضع الشخص تحت طائلة المسؤولية  </feature>
+<preference name="permissions" > هذا المنتج مصمم من قبل شركة اكوان يمنع الاتجار بهذا المنتج دون الرجوع للمصدر والحصول على الموافقة منه واي خرق لهذا القانون سيضع الشخص تحت طائلة المسؤولية </preference>
+<icon href='icon.png' /> 
+<icon src="icon_72.png" width="72" height="72" />
+<icon src="icon_48.png" width="48" height="48" />
+<icon src="icon_36.png" width="36" height="36" />
+<icon src="icon_114.png" width="114" height="114" />
+<name>برنامج حساب الغالب والمغلوب  </name>
+
+<description>
+برنامج الغالب والمغلوب  
+</description>
+
+<author href="#" email="">
+شركة اكوان9 للمعلم الاكبر موفق اراكيلي 
+</author>
+
+
+</widget>
