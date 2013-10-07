@@ -1,7 +1,15 @@
-// JavaScript Document
-// JavaScript Document
 
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+
+<title>القرعة الجعفرية  </title>
+<script type="text/javascript">
 /*!
  * jQuery JavaScript Library v1.4.2
  * http://jquery.com/
@@ -156,3 +164,100 @@ d,e);d={top:b.top-e.top+j,left:b.left-e.left+i};"using"in b?b.using.call(a,d):f.
 f.top,left:d.left-f.left}},offsetParent:function(){return this.map(function(){for(var a=this.offsetParent||s.body;a&&!/^body|html$/i.test(a.nodeName)&&c.css(a,"position")==="static";)a=a.offsetParent;return a})}});c.each(["Left","Top"],function(a,b){var d="scroll"+b;c.fn[d]=function(f){var e=this[0],j;if(!e)return null;if(f!==w)return this.each(function(){if(j=wa(this))j.scrollTo(!a?f:c(j).scrollLeft(),a?f:c(j).scrollTop());else this[d]=f});else return(j=wa(e))?"pageXOffset"in j?j[a?"pageYOffset":
 "pageXOffset"]:c.support.boxModel&&j.document.documentElement[d]||j.document.body[d]:e[d]}});c.each(["Height","Width"],function(a,b){var d=b.toLowerCase();c.fn["inner"+b]=function(){return this[0]?c.css(this[0],d,false,"padding"):null};c.fn["outer"+b]=function(f){return this[0]?c.css(this[0],d,false,f?"margin":"border"):null};c.fn[d]=function(f){var e=this[0];if(!e)return f==null?null:this;if(c.isFunction(f))return this.each(function(j){var i=c(this);i[d](f.call(this,j,i[d]()))});return"scrollTo"in
 e&&e.document?e.document.compatMode==="CSS1Compat"&&e.document.documentElement["client"+b]||e.document.body["client"+b]:e.nodeType===9?Math.max(e.documentElement["client"+b],e.body["scroll"+b],e.documentElement["scroll"+b],e.body["offset"+b],e.documentElement["offset"+b]):f===w?c.css(e,d):this.css(d,typeof f==="string"?f:f+"px")}});A.jQuery=A.$=c})(window);
+
+</script>
+
+
+
+<script type="text/javascript">
+$(function()
+{
+$(".add").click(function()
+{
+var currentVal = parseInt($(this).next(".qty").val());
+if (currentVal != NaN)
+{
+$(this).next(".qty").val(currentVal + 1);
+
+} 
+});
+});
+
+</script>
+
+</head>
+
+<body>
+
+<h1> ابدأ الضرب </h1><br />
+
+    <form id="myForm">
+      <input type="button" value="+" id="add6" class="add" style="width:20%" />
+      <input   id="qty8" type="" value="0" class="qty" /><br />
+
+      <input type="button" value="+" id="add8" class="add" style="width:20%" />
+      <input   id="qty7"  type="" value="0" class="qty" /><br />
+
+      <input type="button" value="+" id="add7" class="add" style="width:20%" />
+      <input   id="qty6" type="" value="0" class="qty" /><br />
+
+      <input type="button" value="+" id="add5" class="add" style="width:20% ;border-bottom-style:"/>
+      <input     type="" id="qty5" value="0" class="qty" />
+    </form>
+</script>
+<script src="js/hammer.js"></script>
+
+<script>
+
+    function getEl(id) {
+        return document.getElementById(id);
+    }
+
+    function toggleBody() {
+        document.body.className = (document.body.className == 'toggle') ? '' : 'toggle';
+    }
+
+
+    /**
+     * simple fastclick
+     * @param   el
+     * @param   handler
+     */
+    function fastClick(el, handler) {
+        el.addEventListener("click", function(ev) {
+            ev.preventDefault();
+        }, false);
+        Hammer(el).on("tap doubletap", handler);
+    }
+
+    /**
+     * small jQuery plugin
+     * @param handler
+     * @return {*}
+     */
+    jQuery.fn.fastClick = function(handler) {
+        this.click(function(ev) { ev.preventDefault(); });
+        Hammer(this[0]).on("tap doubletap", handler);
+        return this;
+    };
+
+
+    // demo the methods
+    var fast = getEl('add6');
+    var $fast = $('#add8');
+    var normal = getEl('add7');
+
+
+    fastClick(fast, toggleBody);
+    $fast.fastClick(toggleBody);
+    normal.addEventListener("click", function(ev) {
+        toggleBody();
+        ev.preventDefault();
+    }, false);
+
+
+</script>
+<script src="js/ga.js"></script>
+</body>
+</html>
+ 
